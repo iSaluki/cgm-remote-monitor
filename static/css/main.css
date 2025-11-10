@@ -479,69 +479,90 @@ a:hover {
 
 .pill.rawbg {
   display: inline-block;
-  border-radius: 2px;
-  border: 1px solid #808080;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
   padding: 0;
+  background: var(--bg-elevated);
 }
 
 .pill.rawbg em {
-  color: white;
-  background-color: black;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
   display: block;
   font-size: 20px;
-  border-radius: 0;
-  padding: 0 2px;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  padding: 2px 6px;
+  font-weight: 600;
 }
 
 .pill.rawbg label {
   display: block;
   font-size: 14px;
-  padding: 0 2px;
+  padding: 2px 6px;
+  color: var(--text-secondary);
 }
 
 .alarming .bgButton {
-  border-color: #bdbdbd;
-  color: #000;
-  box-shadow: 2px 2px 0 #ddd;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .alarming.urgent .bgButton {
-  background-color: red;
+  background-color: var(--urgent);
+  color: white;
+  border-color: var(--urgent);
+  animation: urgent-pulse 1.5s ease-in-out infinite;
 }
 
 .alarming.warning .bgButton {
-  background-color: yellow;
+  background-color: var(--warning);
+  color: var(--bg-primary);
+  border-color: var(--warning);
+  font-weight: 600;
 }
 
 .alarming .bgButton:active {
-  border: 2px solid #bdbdbd;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(0);
 }
-
 
 .button {
   text-align: center;
-  background: #ababab;
-  margin: 10px auto;
+  background: var(--bg-elevated);
+  margin: 12px auto;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--accent-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .tooltip {
   top: 0;
   left: 0;
-  color: #444;
+  color: var(--text-primary);
   position: absolute;
   text-align: left;
-  padding: 4px;
+  padding: 10px 14px;
   font-size: 14px;
-  line-height: 15px;
-  background: white;
-  border: 0;
-  border-radius: 8px;
+  line-height: 1.5;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
   float: right;
   min-width: 150px;
   max-width: 400px;
+  backdrop-filter: blur(10px);
 }
 
 .alarms {
@@ -554,9 +575,9 @@ a:hover {
 
 .focus-range {
   list-style: none;
-  margin: 4px;
+  margin: 6px;
   padding: 0;
-  color: #808080;
+  color: var(--text-secondary);
   width: 40%;
   text-align: center;
 }
@@ -565,15 +586,26 @@ a:hover {
   display: inline-block;
   font-size: 18px;
   white-space: nowrap;
-  border-radius: 5px;
-  border: 2px solid #000;
+  border-radius: var(--border-radius-md);
+  border: 2px solid var(--border-color);
   cursor: pointer;
+  padding: 8px 16px;
+  margin: 4px;
+  transition: all var(--transition-base);
+  background: var(--bg-elevated);
+}
+
+.focus-range li:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
 }
 
 .focus-range .selected {
-  border-color: #808080;
-  color: #000;
-  background: #808080;
+  border-color: var(--accent-primary);
+  color: white;
+  background: var(--accent-primary);
+  font-weight: 600;
 }
 
 .pill.hidden {
@@ -582,29 +614,39 @@ a:hover {
 
 .toolbar-title {
   text-align: left;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
 .toolbar-title h2 {
   margin: 0;
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .page-content {
-  padding: 10px;
+  padding: 16px;
 }
 
 .authentication-status {
-  padding: 10px;
-  border-top: 1px solid #bdbdbd;
+  padding: 12px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
 .authentication-status a {
-  color: #2196f3;
+  color: var(--accent-primary);
   text-decoration: underline;
+}
+
+.authentication-status a:hover {
+  color: var(--accent-hover);
 }
 
 .authentication-status .small {
   font-size: 12px;
+  opacity: 0.8;
 }
 
 @media (max-width: 1000px) {
