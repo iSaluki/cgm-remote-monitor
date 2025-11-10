@@ -1,11 +1,11 @@
 body {
-  fill: #fff;
+  fill: var(--text-primary);
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #ffffff;
+  stroke: var(--text-secondary);
   shape-rendering: crispEdges;
 }
 
@@ -13,16 +13,22 @@ body {
   shape-rendering: crispEdges;
 }
 .grid path, .axis line {
-  stroke: #bdbdbd;
-  stroke-opacity: 1;
+  stroke: var(--border-color);
+  stroke-opacity: 0.6;
 }
 
 .brush .extent {
-  stroke: #ffffff;
+  stroke: var(--text-primary);
   stroke-opacity: 0;
   fill-opacity: 0;
 }
 
 .tooltip {
   pointer-events: none;
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
 }

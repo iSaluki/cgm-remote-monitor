@@ -1,10 +1,15 @@
 .dropdown-menu {
   font-size: 200%;
   margin: 0;
-  padding: 0;
+  padding: 8px;
   position: absolute;
   visibility: hidden;
   right: 8px;
+  background: var(--bg-elevated);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
 }
 
 .dropdown-menu li {
@@ -18,11 +23,18 @@
   text-decoration: none;
   white-space: nowrap;
   width: auto;
-  background: #BBBBBB;
-  color: #24313C;
-  padding: 2px 10px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 10px 16px;
+  border-radius: var(--border-radius-sm);
+  margin: 4px 0;
+  transition: all var(--transition-base);
+  font-weight: 500;
 }
 
 .dropdown-menu li a:hover {
-  background: #EEEEFF;
+  background: var(--accent-primary);
+  color: white;
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-sm);
 }
