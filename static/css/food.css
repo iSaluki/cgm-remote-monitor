@@ -7,11 +7,14 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 #fe_form {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .width50px {
@@ -36,21 +39,49 @@
 
 .sortablequickpick {
   cursor: move;
-  background-color: #383838;
-  border-radius: 8px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  margin: 8px 0;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.sortablequickpick:hover {
+  background-color: var(--bg-tertiary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
 }
 
 .fe_qpeditimg, .fe_qpremoveimg, .fe_editimg, .fe_removeimg, .fe_qpupimg, .fe_qpfoodremoveimg {
   cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0.8;
+}
+
+.fe_qpeditimg:hover, .fe_qpremoveimg:hover, .fe_editimg:hover, .fe_removeimg:hover, .fe_qpupimg:hover, .fe_qpfoodremoveimg:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .draggablefood {
-  background-color: gray;
+  background-color: var(--bg-elevated);
   cursor: move;
-  border: 2px solid #000;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 8px;
+  transition: all var(--transition-base);
+}
+
+.draggablefood:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--accent-primary);
 }
 
 .fe_foodinsideqp {
-  background-color:gray;
-  border: 2px solid;
+  background-color: var(--bg-elevated);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 6px;
 }
