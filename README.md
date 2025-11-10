@@ -1,56 +1,93 @@
-Nightscout Web Monitor (a.k.a. cgm-remote-monitor)
-==================================================
+<div align="center">
 
-![nightscout horizontal](https://cloud.githubusercontent.com/assets/751143/8425633/93c94dc0-1ebc-11e5-99e7-71a8f464caac.png)
+# 🩸 Nightscout
+
+### *CGM Remote Monitor*
+
+**A web-based CGM (Continuous Glucose Monitor) to allow multiple caregivers to remotely view a patient's glucose data in real time.**
 
 [![Build Status][build-img]][build-url]
-[![Dependency Status][dependency-img]][dependency-url]
 [![Coverage Status][coverage-img]][coverage-url]
 [![Codacy Badge][codacy-img]][codacy-url]
 [![Discord chat][discord-img]][discord-url]
 
-This acts as a web-based CGM (Continuous Glucose Monitor) to allow
-multiple caregivers to remotely view a patient's glucose data in
-real time.  The server reads a MongoDB which is intended to be data
-from a physical CGM, where it sends new SGV (sensor glucose values) as
-the data becomes available.  The data is then displayed graphically
-and blood glucose values are predicted 0.5 hours ahead using an
-autoregressive second order model.  Alarms are generated for high and
-low values, which can be cleared by any watcher of the data.
+[Features](#features) • [Screenshots](#screenshots) • [Installation](#install) • [Documentation](#documentation) • [Community](#community)
 
-# Looking for documentation?
+![nightscout horizontal](https://cloud.githubusercontent.com/assets/751143/8425633/93c94dc0-1ebc-11e5-99e7-71a8f464caac.png)
 
-## End user?
+</div>
 
-Nightscout documentation is currently split to two locations. This page lists all the configuration options in
-Nightscout and is useful for users who've already gone through the installation process. IF you're looking
-for the documentation that looks like it's written for non-programmers, that's located at [nightscout.github.io](https://nightscout.github.io/).
+---
 
-Older documentation is available at [nightscout.info](http://nightscout.info).
+## 📊 Features
 
-## Developer?
+Nightscout is a powerful, open-source platform for visualizing and sharing continuous glucose monitoring (CGM) data:
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+- **📈 Real-time Monitoring** - View glucose levels in real-time from anywhere with an internet connection
+- **🔔 Customizable Alarms** - Set personalized high/low glucose alerts with predictive warnings
+- **👥 Multi-Caregiver Support** - Share access with multiple caregivers, family members, or healthcare providers
+- **📱 Cross-Platform** - Works on smartphones, tablets, and desktop computers
+- **🔌 CGM Integration** - Compatible with Dexcom, Libre, Medtronic, and other popular CGM systems
+- **💊 Treatment Tracking** - Log insulin doses, carbs, and other treatments directly in the interface
+- **🤖 Smart Predictions** - AI-powered glucose forecasting using autoregressive models
+- **📊 Detailed Reports** - Generate comprehensive reports for healthcare appointments
+- **🔐 Secure & Private** - Your data stays under your control with optional authentication
+- **🌍 Global Language Support** - Available in 25+ languages
 
-## [#WeAreNotWaiting](https://twitter.com/hashtag/wearenotwaiting?src=hash&vertical=default&f=images) and [this](https://vimeo.com/109767890) is why.
+## 📸 Screenshots
 
-[![Coverage Status](https://coveralls.io/repos/github/nightscout/cgm-remote-monitor/badge.svg?branch=master)](https://coveralls.io/github/nightscout/cgm-remote-monitor?branch=master)
+### Main Dashboard
+View your glucose readings, trends, and treatment history at a glance:
 
+![Nightscout Main Dashboard](docs/images/nightscout-main-dashboard.png)
+
+### Settings & Customization
+Personalize your Nightscout experience with extensive configuration options:
+
+![Nightscout Settings](docs/images/nightscout-settings.png)
+
+## 📖 Documentation
+
+### 👤 End User Documentation
+
+- **[nightscout.github.io](https://nightscout.github.io/)** - Comprehensive user-friendly documentation for non-technical users
+- **[This page](#environment)** - Detailed configuration options reference for advanced users
+- **[nightscout.info](http://nightscout.info)** - Legacy documentation and community resources
+
+### 💻 Developer Documentation
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, coding standards, and contribution guidelines.
+
+## 🚀 Quick Start
+
+Ready to set up Nightscout? Check out our [comprehensive setup guide](https://nightscout.github.io/nightscout/new_user/) for step-by-step instructions.
+
+## 🤝 Community
+
+### #WeAreNotWaiting
+
+Join the diabetes technology revolution! Learn more about the [#WeAreNotWaiting](https://twitter.com/hashtag/wearenotwaiting?src=hash&vertical=default&f=images) movement and watch [this inspiring video](https://vimeo.com/109767890) to understand why we do what we do.
+
+### Get Involved
+
+- 💬 **[Discord Community][discord-url]** - Chat with users and developers
+- 🐛 **[Issue Tracker](https://github.com/nightscout/cgm-remote-monitor/issues)** - Report bugs or request features  
+- 🌟 **[Star this repo](https://github.com/nightscout/cgm-remote-monitor)** - Show your support
+- 🔀 **[Contribute](CONTRIBUTING.md)** - Help improve Nightscout
+
+---
+
+<!-- Badge References -->
 [build-img]: https://img.shields.io/travis/nightscout/cgm-remote-monitor.svg
 [build-url]: https://travis-ci.org/nightscout/cgm-remote-monitor
-[dependency-img]: https://img.shields.io/david/nightscout/cgm-remote-monitor.svg
-[dependency-url]: https://david-dm.org/nightscout/cgm-remote-monitor
 [coverage-img]: https://img.shields.io/coveralls/nightscout/cgm-remote-monitor/dev.svg
 [coverage-url]: https://coveralls.io/github/nightscout/cgm-remote-monitor?branch=master
 [codacy-img]: https://www.codacy.com/project/badge/f79327216860472dad9afda07de39d3b
 [codacy-url]: https://www.codacy.com/app/Nightscout/cgm-remote-monitor
 [discord-img]: https://img.shields.io/discord/629952586895851530?label=discord%20chat
 [discord-url]: https://discord.gg/rTKhrqz
-[heroku-img]: https://www.herokucdn.com/deploy/button.png
-[heroku-url]: https://heroku.com/deploy?template=https://github.com/nightscout/cgm-remote-monitor
 [update-img]: docs/update.png
 [update-fork]: http://nightscout.github.io/pages/update-fork/
-[original]: https://github.com/rnpenguin/cgm-remote-monitor
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
